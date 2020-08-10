@@ -35,4 +35,5 @@ COPY mozhttp3server /home/docker/data/mozhttp3server
 
 RUN bin/python setup.py develop
 
-CMD [ "bin/python mozhttp3server/server.py" ]
+ENTRYPOINT ["/usr/bin/dumb-init", "/app/docker-entrypoint.sh"]
+CMD [ "server" ]
