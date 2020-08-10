@@ -3,7 +3,7 @@
 cd $(dirname $0)
 case "$1" in
     server)
-    exec python mozhttp3server/server.py
+    exec /home/docker/data/bin/python mozhttp3server/server.py
     ;;
 
     *)
